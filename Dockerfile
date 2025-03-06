@@ -3,11 +3,6 @@ FROM quay.io/astronomer/astro-runtime:12.7.1
 # install dbt into a venv to avoid package dependency conflicts
 WORKDIR "/usr/local/airflow"
 
-# Install Git
-RUN apt-get update && apt-get install -y git 
-
-RUN git config --global http.sslVerify false
-
 COPY dbt-requirements.txt ./
 
 RUN python -m virtualenv dbt_venv && \
