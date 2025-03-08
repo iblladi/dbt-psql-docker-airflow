@@ -1,3 +1,4 @@
 .git
 .env
 .vscode
+.dags/__pycache__

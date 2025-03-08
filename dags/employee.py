@@ -1,6 +1,5 @@
 import os
 from datetime import datetime
-
 from cosmos import DbtDag, ProjectConfig, ProfileConfig, ExecutionConfig
 #from cosmos.profiles import PostgresUserPasswordProfileMapping
 
@@ -21,7 +20,7 @@ profile_config = ProfileConfig(
 )
 
 
-dbt_snowflake_dag = DbtDag(
+dbt_postres_dag = DbtDag(
     project_config=ProjectConfig("/usr/local/airflow/dbt/employee",),
     operator_args={"install_deps": True},
     profile_config=profile_config,

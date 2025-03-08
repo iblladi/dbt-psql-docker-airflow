@@ -1,4 +1,4 @@
-{{ config(materialized='materialized_view') }}
+{{ config(materialized='view') }}
 
 
 --Calling macros

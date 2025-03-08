@@ -1,4 +1,4 @@
-{{ config(materialized='materialized_view') }}
+{{ config(materialized='view') }}
 
 {% set departments = dbt_utils.get_column_values(table=ref('stg_psql_department'), column='dept_name') %}
 
