@@ -1,4 +1,4 @@
-{{ config(materialized='view', schema='dbt') }}
+{{ config(materialized='materialized_view') }}
 
 
 --Calling macros
